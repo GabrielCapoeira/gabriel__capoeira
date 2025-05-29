@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <title>gabriel__capoeira Login</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- LOGIN -->
+  <div class="container active" id="login-container">
+    <h1>gabriel__capoeira</h1>
+    <input type="text" id="username" placeholder="Usuário" />
+    <input type="password" id="password" placeholder="Senha" />
+    <button onclick="handleLogin()">Entrar</button>
+    <button class="link-button" onclick="showForgotPassword()">Esqueceu a senha?</button>
+    <p id="login-msg"></p>
+  </div>
+
+  <!-- RECUPERAR SENHA -->
+  <div class="container" id="forgot-password-container">
+    <h1>Recuperar Senha</h1>
+    <input type="text" id="recovery-input" placeholder="Digite seu e-mail ou usuário" />
+    <button onclick="recoverPassword()">Enviar</button>
+    <p id="recovery-msg"></p>
+    <button onclick="backToLogin()">Voltar ao login</button>
+  </div>
+
+  <!-- LOADING -->
+  <div class="container" id="loading-container">
+    <h1>Login bem-sucedido</h1>
+    <div id="progress-bar">
+      <div id="progress"></div>
+    </div>
+    <button class="hidden" id="continue-btn" onclick="showNotepad()">Ir para o bloco de notas</button>
+  </div>
+
+  <!-- BLOCO DE NOTAS -->
+  <div class="container" id="notepad-container">
+    <h1>Bloco de Notas</h1>
+    <textarea id="notepad" placeholder="Escreva algo..."></textarea>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
